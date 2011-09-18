@@ -1,8 +1,13 @@
 Pulse
-----------
 
-- This is just a CSS experiment. I'm sure smart people like you can create fallbacks and make it cross-browser compliant.
+This is just a CSS experiment. I'm sure smart people like you can create fallbacks and make it cross-browser compliant.
 
-- You can replace the one image being used with CSS, but I chose an image just because it was easy to swap out and a little less markup.
+You can replace the one image being used with CSS, but I chose an image just because it was easy to swap out and a little less markup.
 
-- It only works in -webkit- browsers at the moment.
+It only works in -webkit- browsers at the moment.
+
+=============
+
+Demo
+
+http://moeedm.com/sandbox/pulse
