@@ -1,0 +1,115 @@
+body {
+	position: relative;
+	background: #e5e5e5;
+}
+
+header {
+	width: 800px;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow: hidden;
+	padding: 0 0 20px 0;
+}
+	header h1 {
+		float: left;
+		font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, Tahoma, sans-serif;
+		font-size: 32px;
+		font-weight: bold;
+		color: #333;
+		text-shadow: 0 1px 0 #fff;
+	}
+	
+	header #share {
+		float: right;
+		opacity: 0.5;
+		-webkit-transition: opacity 150ms ease-out;
+		padding: 15px 0 0 0;
+	}
+		header #share:hover {
+			opacity: 1;
+		}
+
+#content {
+	width: 200px;
+	margin: 0 auto;
+	background: #fff url(map.jpg);
+	box-shadow: 1px 1px 1px #aaa;
+	border-radius: 3px;
+	padding: 200px 300px;
+}
+
+	#content a#target {
+		width: 30px;
+		height: 30px;
+		display: block;
+		margin: 0 auto;
+		margin-left: -35px;
+		position: relative;
+	}
+		#content a#target #pulse {
+			width: 30px;
+			height: 30px;
+			display: block;
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			border: 2px solid #30a3ec;
+			border-radius: 50px;
+			box-shadow: 0 0 5px #a0eaff;
+			/* Animate */
+			-webkit-animation-name: pulse;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: ease-out;
+		}
+
+pre {
+	font-family: Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier New", Courier, monospace;
+	font-size: 14px;
+}
+
+section.snippet {
+	width: 800px;
+	margin: 0 auto;
+	background: #222;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+	section.snippet h2 {
+		color: #fff;
+		padding: 20px;
+		border-bottom: 1px dotted #333;
+		font-family: Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier New", Courier, monospace;
+	}
+	
+	section.snippet ul {
+		font-family: Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier New", Courier, monospace;
+		font-size: 12px;
+		color: #ccc;
+		padding: 20px 20px 10px 40px;
+	}
+		section.snippet ul li {
+			padding: 0 0 10px 0;
+			line-height: 18px;
+			width: 500px;
+			list-style-type: circle;
+		}
+
+@-webkit-keyframes pulse {
+
+	0% {
+		-webkit-transform: scale(0.3);
+		opacity: 0.5;
+	}
+	
+	80% {
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform: scale(2.5);
+		opacity: 0;
+	}	
+}

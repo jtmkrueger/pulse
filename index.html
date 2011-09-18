@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Pulse</title>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="pulse.css" />
+	<link rel="stylesheet" type="text/css" href="jquery.snippet.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+	<script type="text/javascript" src="jquery.snippet.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("pre.html").snippet("html",{style:"bipolar", showNum:false, transparent:true});
+		$("pre.css").snippet("css",{style:"bipolar",showNum:false, transparent:true});
+		$("a#target").click(function() {
+ 			alert('Target acquired.')
+		});
+	});
+	</script>
+</head>
+
+<body>
+<header>
+	<h1>Pulse</h1>
+	<div id="share">
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Pulse — A simple pulsating indicator. #css" data-count="horizontal" data-via="mmhd">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+	<a href="https://twitter.com/mmhd" class="twitter-follow-button" data-width="110px" data-show-count="false">Follow @mmhd</a>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+	</div>
+</header>
+<div id="content">
+	<a href="#" id="target" title="Target">
+		<img src="spot.png" alt="" class="indicator" />
+		<span id="pulse"></span>
+	</a>
+</div>
+<section class="snippet">
+<h2>Notes</h2>
+<ul>
+	<li>This is just a CSS experiment. I'm sure smart people like you can create fallbacks and make it cross-browser compliant.</li>
+	<li>You can replace the one image being used with CSS, but I chose an image just because it was easy to swap out and a little less markup.</li>
+	<li>It only works in -webkit- browsers at the moment.</li>
+</ul>
+</section>
+
+<section class="snippet">
+<h2>The HTML</h2>
+<pre class="html">
+&lt;a href="#" id="target" title="Target"&gt;
+	&lt;img src="spot.png" alt="" class="indicator" /&gt;
+	&lt;span id="pulse"&gt;&lt;/span&gt;
+&lt;/a&gt;</pre>
+</section>
+
+<section class="snippet">
+<h2>The CSS</h2>
+<pre class="css">
+a#target {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+	a#target #pulse {
+		width: 30px;
+		height: 30px;
+		display: block;
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		border: 2px solid #30a3ec;
+		border-radius: 50px;
+		box-shadow: 0 0 5px #a0eaff;
+		/* Animate */.
+
+		-webkit-animation-name: pulse;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: ease-out;
+	}
+
+
+/* The animation */
+@-webkit-keyframes pulse {
+
+	0% { -webkit-transform: scale(0.3); opacity: 0.5; }
+
+	80% { -webkit-transform: scale(1.5); opacity: 0; }
+	100% { -webkit-transform: scale(2.5); opacity: 0; }
+}
+</section>
+</body>
+</html>
